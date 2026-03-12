@@ -8,13 +8,17 @@ html, body {
   padding: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 10px;
   background-color: #a9a9a9;
 }
 
 body {
-  width: 70%;
+  width: 800px;
   min-width: 800px;
   margin: 0 auto;
 }
@@ -60,13 +64,13 @@ header {
   flex-flow: row wrap;
 }
 
-main, header, nav, article, aside, footer, section {
+main, header, nav, aside, footer, section {
   background-color: rgba(0,255,0,0.5);
   padding: 1%;
 }
 
 h1 {
-  flex: 1;
+  flex: 5;
   text-transform: uppercase;
 }
 
@@ -111,15 +115,19 @@ nav a, nav span {
 .content {
   display: flex;
   gap: 10px;
+  margin-bottom: 10px;
 }
 
 main {
   flex: 2;
+  min-width: 0;
 }
 
 aside {
   flex: 1;
   padding: 1%;
+  min-width: 0;
+  overflow: auto;
 }
 
 aside a {
@@ -133,7 +141,7 @@ aside img {
 }
 
 footer {
-  margin-top: 10px;
+  clear: both;
 }
 
 .flex-container {
